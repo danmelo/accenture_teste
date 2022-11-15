@@ -160,12 +160,9 @@ public class VehicleInsuranceApplication {
 
     public void selectName(String name) {
         driver.findElement(By.xpath(FIRSTNAME)).sendKeys(name);
-        for (int i = 0; i < 9; i++) {
-            if (name.charAt(i) >= '0' && name.charAt(i) <= '9'){
-            Assert.assertFalse("Campo só aceita letras", false);
 
-            }
-        }
+            Assert.assertTrue(name.matches("[a-z-A-Z]*") );
+
     }
     public void selectLastName(String lastName){
         driver.findElement(By.xpath(LASTNAME)).sendKeys(lastName);

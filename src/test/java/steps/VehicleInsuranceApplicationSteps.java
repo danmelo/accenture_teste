@@ -98,7 +98,7 @@ public class VehicleInsuranceApplicationSteps {
 
     @E("preencha o formulario Insurant Data")
     public void preenchaOFormularioInsurantData() {
-        VehicleInsuranceApplication.selectName("Daniel");
+        VehicleInsuranceApplication.selectName("DANiEL");
         VehicleInsuranceApplication.selectLastName("Melo");
         VehicleInsuranceApplication.selectDateOfBirth("08/29/1985");
         VehicleInsuranceApplication.selectGender();
