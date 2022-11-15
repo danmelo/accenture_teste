@@ -51,8 +51,7 @@ public class VehicleInsuranceApplicationSteps {
         VehicleInsuranceApplication.selectHandDrive();
         VehicleInsuranceApplication.selectNumberOfSeats2();
         VehicleInsuranceApplication.selectFuelType();
-        VehicleInsuranceApplication.selectLicenseNumber("0123456789");
-        VehicleInsuranceApplication.selectAnnualMileage("100000");
+
 
     }
 
@@ -79,6 +78,17 @@ public class VehicleInsuranceApplicationSteps {
     @E("insiro um valor válido no List Price")
         public void insiroUmValorValidoNoListPrice(){
         VehicleInsuranceApplication.selectListPrice("500");
+    }
+
+    @E("insiro um numero de ate 10 caracteres no license plate number")
+        public void insiroUmNumeroDeAte10CaracteresNoLicensePlateNumber(){
+        VehicleInsuranceApplication.selectLicenseNumber("0123456789");
+
+    }
+
+    @E("insiro um valor entre 100 e 100000 no annual mileage")
+        public void insiroUmValorEntre100E100000NoAnnualMileage(){
+        VehicleInsuranceApplication.selectAnnualMileage("100000");
     }
 
     @E("clique no botao next")
@@ -124,7 +134,7 @@ public class VehicleInsuranceApplicationSteps {
     }
 
     @E("seleciono o Option Price")
-    public void selecionoOOptionPrice() {
+    public void selecionoOOptionPrice(){
         VehicleInsuranceApplication.selectPriceOption();
     }
 

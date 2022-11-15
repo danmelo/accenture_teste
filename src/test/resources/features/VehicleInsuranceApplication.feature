@@ -11,6 +11,8 @@ Funcionalidade: Teste Vehicle Insurance Application
     E insiro um valor de payload entre 1 e 1000
     E insiro um valor entre 100 e 50000 de total weight
     E insiro um valor válido no List Price
+    E insiro um numero de ate 10 caracteres no license plate number
+    E insiro um valor entre 100 e 100000 no annual mileage
     E clique no botao next
     E preencha o formulario Insurant Data
     E clique no segundo botao next
