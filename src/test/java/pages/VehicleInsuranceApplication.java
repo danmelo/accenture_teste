@@ -87,11 +87,15 @@ public class VehicleInsuranceApplication {
         selectObjeto.selectByVisibleText("Scooter");
     }
     public void selectCylinderCapacity(String cylinder){
+        int format = Integer.parseInt(cylinder);
         driver.findElement(By.xpath(CYLINDERCAPACITY)).sendKeys(cylinder);
+        Assert.assertTrue(format>=1 && format<= 2000);
     }
 
     public void selectEngine(String engine){
+        int format = Integer.parseInt(engine);
         driver.findElement(By.xpath(ENGINE)).sendKeys(engine);
+        Assert.assertTrue(format>=1 && format<= 2000);
     }
     public void selectDate(String date){
         driver.findElement(By.xpath(DATE)).sendKeys(date);
@@ -119,11 +123,15 @@ public class VehicleInsuranceApplication {
     }
 
     public void selectPayload(String payload){
+        int format = Integer.parseInt(payload);
         driver.findElement(By.xpath(PAYLOAD)).sendKeys(payload);
+        Assert.assertTrue(format>=1 && format<= 1000);
     }
 
     public void selectTotalWeight(String totalWeight){
+        int format = Integer.parseInt(totalWeight);
         driver.findElement(By.xpath(TOTALWEIGHT)).sendKeys(totalWeight);
+        Assert.assertTrue(format>=100 && format<= 50000);
     }
 
     public void selectListPrice(String listPrice) {
@@ -269,13 +277,19 @@ public class VehicleInsuranceApplication {
         driver.findElement(By.xpath(USERNAME)).sendKeys(username);
     }
 
-    public void enterPassword(String password){
+    public void creatPassword(String password, String confirmPassword){
         driver.findElement(By.xpath(PASSWORD)).sendKeys(password);
+        driver.findElement(By.xpath(CONFIRMPASSWORD)).sendKeys(confirmPassword);
+        Assert.assertTrue((password == confirmPassword)&&(password.length()>=6));
     }
 
-    public void confirmPassword(String confirmPassword){
-        driver.findElement(By.xpath(CONFIRMPASSWORD)).sendKeys(confirmPassword);
-    }
+//    public void enterPassword(String password){
+//        driver.findElement(By.xpath(PASSWORD)).sendKeys(password);
+//    }
+//
+//    public void confirmPassword(String confirmPassword){
+//        driver.findElement(By.xpath(CONFIRMPASSWORD)).sendKeys(confirmPassword);
+//    }
 
     public void enterComments(String comments){
         driver.findElement(By.xpath(COMMENTS)).sendKeys(comments);

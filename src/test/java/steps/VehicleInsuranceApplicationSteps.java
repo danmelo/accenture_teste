@@ -7,6 +7,7 @@ import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import io.cucumber.junit.CucumberOptions;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.VehicleInsuranceApplication;
@@ -45,19 +46,39 @@ public class VehicleInsuranceApplicationSteps {
     public void preenchaDadosDoVeiculo() {
         VehicleInsuranceApplication.selectMake();
         VehicleInsuranceApplication.selectModel();
-        VehicleInsuranceApplication.selectCylinderCapacity("2000");
-        VehicleInsuranceApplication.selectEngine("1000");
         VehicleInsuranceApplication.selectDate("11/12/2022");
         VehicleInsuranceApplication.selectNumberOfSeats();
         VehicleInsuranceApplication.selectHandDrive();
         VehicleInsuranceApplication.selectNumberOfSeats2();
         VehicleInsuranceApplication.selectFuelType();
-        VehicleInsuranceApplication.selectPayload("1000");
-        VehicleInsuranceApplication.selectTotalWeight("50000");
-        VehicleInsuranceApplication.selectListPrice("100000");
         VehicleInsuranceApplication.selectLicenseNumber("0123456789");
         VehicleInsuranceApplication.selectAnnualMileage("100000");
 
+    }
+
+    @E("insiro um valor valido para cylinder capacity")
+        public void insiroUmValorValidoParaCylinderCapacity(){
+        VehicleInsuranceApplication.selectCylinderCapacity("2000");
+    }
+
+    @E("insiro um valor valido de engine performance")
+        public void insiroUmValorValidoDeEnginePerformance(){
+            VehicleInsuranceApplication.selectEngine("1000");
+        }
+
+    @E("insiro um valor de payload entre 1 e 1000")
+        public void insiroUmValorDePayloadEntre1E1000(){
+        VehicleInsuranceApplication.selectPayload("1000");
+    }
+
+    @E("insiro um valor entre 100 e 50000 de total weight")
+        public void insiroUmValorEntre100E50000DeTotalWeight(){
+        VehicleInsuranceApplication.selectTotalWeight("50000");
+    }
+
+    @E("insiro um valor válido no List Price")
+        public void insiroUmValorValidoNoListPrice(){
+        VehicleInsuranceApplication.selectListPrice("500");
     }
 
     @E("clique no botao next")
@@ -113,16 +134,19 @@ public class VehicleInsuranceApplicationSteps {
     }
 
     @E("preencho os dados de Send Quote")
-    public void preenchoOsDadosDeSendQuote(){
+    public void preenchoOsDadosDeSendQuote() {
         VehicleInsuranceApplication.enterEmail("danmelorayder@gmail.com");
         VehicleInsuranceApplication.enterPhone("55555550");
         VehicleInsuranceApplication.enterUsername("danmelo1985");
-        VehicleInsuranceApplication.enterPassword("123Dan");
-        VehicleInsuranceApplication.confirmPassword("123Dan");
         VehicleInsuranceApplication.enterComments("Teste");
-
-
     }
+
+    @E("crio uma senha forte")
+        public void crioUmaSenhaForte(){
+            VehicleInsuranceApplication.creatPassword("123Dan", "123Dan");
+        }
+
+
     @Quando("eu clico no botao send")
     public void clicoNoBotaoSend() {
         VehicleInsuranceApplication.sendQuote();

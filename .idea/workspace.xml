@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="98774b95-c782-4c3f-80af-cf4986331529" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="98774b95-c782-4c3f-80af-cf4986331529" name="Changes" comment="atualização do report cucumber">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/VehicleInsuranceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/VehicleInsuranceApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/steps/VehicleInsuranceApplicationSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/steps/VehicleInsuranceApplicationSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/VehicleInsuranceApplication.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/VehicleInsuranceApplication.feature" afterDir="false" />
     </list>
@@ -40,7 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Daniel Melo/OneDrive/Documentos/QA Academy/accenture_teste"
+    "last_opened_file_path": "C:/Users/Daniel Melo/OneDrive/Documentos/QA Academy/qaacademy_selenium"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -73,6 +72,14 @@
       <option name="presentableId" value="Default" />
       <updated>1668185022820</updated>
     </task>
+    <task id="LOCAL-00001" summary="atualização do report cucumber">
+      <created>1668452106509</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668452106509</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -85,6 +92,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="atualização do report cucumber" />
+    <option name="LAST_COMMIT_MESSAGE" value="atualização do report cucumber" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
